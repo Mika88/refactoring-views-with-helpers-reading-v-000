@@ -26,3 +26,37 @@
   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 100.1.168.30 at 2019-01-05 21:25:51 +0000
+Cannot render console from 100.1.168.30! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 34ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 100.1.168.30 at 2019-01-05 21:25:56 +0000
+Cannot render console from 100.1.168.30! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/Mika88/refactoring-views-with-helpers-reading-v-000/app/views/posts/index.html.erb:2: syntax error, unexpected '<'
+..._buffer.append=( post.title - <%= post.updated_at.strftime("...
+...                               ^
+/home/Mika88/refactoring-views-with-helpers-reading-v-000/app/views/posts/index.html.erb:3: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/home/Mika88/refactoring-views-with-helpers-reading-v-000/app/views/posts/index.html.erb:4: syntax error, unexpected keyword_ensure, expecting ')'
+/home/Mika88/refactoring-views-with-helpers-reading-v-000/app/views/posts/index.html.erb:6: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/posts/index.html.erb:2: syntax error, unexpected '<'
+  app/views/posts/index.html.erb:3: syntax error, unexpected keyword_end, expecting ')'
+  app/views/posts/index.html.erb:4: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/posts/index.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.5ms)
